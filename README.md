@@ -1,18 +1,61 @@
-# ⚽ 11. EPL Match Win Prediction: Quantitative ML System
+# ⚽ EPL Prediction System
 
-## 📊 Project Overview
-A sophisticated machine learning system designed to forecast English Premier League (EPL) match outcomes. This project moves beyond basic classification by implementing a time-series aware production pipeline.
+A machine learning system that predicts English Premier League match outcomes and evaluates betting strategies using model probabilities.
 
-## 🛠️ Technical Achievements
-- **Chronological Data Integrity:** Implemented a `date`-based sorting and splitting strategy to eliminate "Future Leakage" in sports forecasting.
-- **Production Pipeline:** Built a Scikit-Learn `Pipeline` integrating `ColumnTransformer` and `StandardScaler` for reproducible feature engineering.
-- **Advanced Hyperparameter Tuning:** Utilized `GridSearchCV` with `TimeSeriesSplit` (5-fold) to optimize a RandomForest model for high-variance environments.
-- **Interpretability:** Extracted feature importance to quantify the impact of "Rolling Form" (last 3 games) vs. "Historical Venue Performance."
-- **Model Persistence:** Integrated `joblib` for model serialization, enabling deployment-ready inference.
+This project includes:
 
-## 📈 Evaluation Metrics
-- **ROC-AUC:** [Insert your score, e.g., 0.63]
-- **Precision (Win):** [Insert your score, e.g., 0.58]
+- Feature-engineered match data
+- Time-series safe model training
+- Hyperparameter tuning
+- Probability calibration
+- Streamlit prediction UI
+- Backtesting engine for betting strategies
 
-## 🐍 Tech Stack
-- Python, Scikit-Learn, Pandas, Joblib.
+---
+
+# 🚀 Project Overview
+
+The goal is to build a **data-driven EPL win prediction model** and evaluate whether the model can outperform bookmaker odds.
+
+The system:
+
+1. Trains a machine learning model on historical match data
+2. Generates calibrated win probabilities
+3. Determines optimal decision thresholds
+4. Simulates betting strategies based on model edge
+
+---
+
+# 🧠 Model
+
+Model used:
+
+**HistGradientBoostingClassifier**
+
+Key characteristics:
+
+- Handles nonlinear relationships
+- Efficient on tabular data
+- Robust with moderate feature counts
+
+Training includes:
+
+- TimeSeriesSplit cross-validation
+- GridSearch hyperparameter tuning
+- Youden's J threshold optimization
+- Optional probability calibration
+
+---
+
+# 📊 Example Results
+
+| Metric | Value |
+|------|------|
+| TimeSeries CV ROC-AUC | ~0.64 |
+| Test ROC-AUC | ~0.64 |
+| Test Accuracy | ~0.63 |
+| Best Threshold | ~0.40 |
+
+---
+
+# 📦 Project Structure
