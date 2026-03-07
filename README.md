@@ -130,31 +130,32 @@ Training includes:
 
 ## 📦 Project Structure
 
+```
 epl-prediction-system
 │
 ├── app
-│ └── streamlit_app.py # Streamlit prediction UI
+│   └── streamlit_app.py        # Streamlit prediction UI
 │
 ├── data
-│ ├── raw
-│ │ └── processed_matches.csv
-│ └── odds # bookmaker odds (future step)
+│   ├── raw
+│   │   └── processed_matches.csv
+│   └── odds                    # bookmaker odds (future step)
 │
 ├── models
-│ └── model artifacts
+│   └── model artifacts
 │
 ├── notebooks
-│ └── exploration.ipynb
+│   └── exploration.ipynb
 │
 ├── src
-│ ├── train.py # model training pipeline
-│ ├── artifacts.py # load model bundle
-│ ├── backtest.py # betting simulation engine
-│ ├── backtest_run.py # CLI backtest runner
-│ └── odds.py # odds utilities
+│   ├── train.py                # model training pipeline
+│   ├── artifacts.py            # load model bundle
+│   ├── backtest.py             # betting simulation engine
+│   ├── backtest_run.py         # CLI backtest runner
+│   └── odds.py                 # odds utilities
 │
-├── CHEATSHEET.md # developer quick guide
+├── CHEATSHEET.md               # developer quick guide
 ├── README.md
 └── requirements.txt
-
+```
 ---
