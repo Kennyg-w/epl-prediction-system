@@ -56,6 +56,7 @@ The system:
         │ Streamlit App     │   │ Backtest Engine  │
         │ Prediction UI     │   │ ROI Simulation   │
         └───────────────────┘   └──────────────────┘
+```
 ---
 
 ## ⭐ Key Features
@@ -123,3 +124,5 @@ Training includes:
 ---
 
 ## 📦 Project Structure
+
+---
