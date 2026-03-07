@@ -1,5 +1,10 @@
 # ⚽ EPL Prediction System
 
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Machine Learning](https://img.shields.io/badge/ML-Scikit--Learn-green)
+![UI](https://img.shields.io/badge/UI-Streamlit-red)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 A machine learning system that predicts English Premier League match outcomes and evaluates betting strategies using model probabilities.
 
 This project includes:
@@ -124,5 +129,32 @@ Training includes:
 ---
 
 ## 📦 Project Structure
+
+epl-prediction-system
+│
+├── app
+│ └── streamlit_app.py # Streamlit prediction UI
+│
+├── data
+│ ├── raw
+│ │ └── processed_matches.csv
+│ └── odds # bookmaker odds (future step)
+│
+├── models
+│ └── model artifacts
+│
+├── notebooks
+│ └── exploration.ipynb
+│
+├── src
+│ ├── train.py # model training pipeline
+│ ├── artifacts.py # load model bundle
+│ ├── backtest.py # betting simulation engine
+│ ├── backtest_run.py # CLI backtest runner
+│ └── odds.py # odds utilities
+│
+├── CHEATSHEET.md # developer quick guide
+├── README.md
+└── requirements.txt
 
 ---
