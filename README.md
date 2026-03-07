@@ -24,6 +24,38 @@ The system:
 3. Determines optimal decision thresholds
 4. Simulates betting strategies based on model edge
 
+## 🏗 System Architecture
+
+```text
+                ┌────────────────────────┐
+                │  Raw Match Data        │
+                │  processed_matches.csv │
+                └─────────────┬──────────┘
+                              │
+                              ▼
+                ┌────────────────────────┐
+                │  Feature Engineering   │
+                │  prepare_features()    │
+                └─────────────┬──────────┘
+                              │
+                              ▼
+                ┌────────────────────────┐
+                │  Model Training        │
+                │  HistGradientBoosting  │
+                │  GridSearchCV          │
+                └─────────────┬──────────┘
+                              │
+                              ▼
+                ┌────────────────────────┐
+                │  Model Artifacts       │
+                │  model + threshold     │
+                └───────┬─────────┬──────┘
+                        │         │
+                        ▼         ▼
+        ┌───────────────────┐   ┌──────────────────┐
+        │ Streamlit App     │   │ Backtest Engine  │
+        │ Prediction UI     │   │ ROI Simulation   │
+        └───────────────────┘   └──────────────────┘
 ---
 
 # 🧠 Model
