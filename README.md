@@ -58,7 +58,39 @@ The system:
         └───────────────────┘   └──────────────────┘
 ---
 
-# 🧠 Model
+## ⭐ Key Features
+
+- **Time-series aware training**
+  - Uses `TimeSeriesSplit` to prevent future data leakage.
+
+- **Feature engineering pipeline**
+  - Rolling team statistics
+  - Opponent strength metrics
+  - Rest advantage features
+  - Home advantage interaction (`home_gd_diff`)
+
+- **Advanced model training**
+  - `HistGradientBoostingClassifier`
+  - Hyperparameter tuning with `GridSearchCV`
+
+- **Probability optimization**
+  - Youden's J threshold selection
+  - Optional probability calibration
+
+- **Interactive prediction interface**
+  - Streamlit app for real-time predictions.
+
+- **Backtesting engine**
+  - Simulates betting strategies using model edge
+  - Calculates ROI and drawdown.
+
+- **Modular ML system**
+  - Training
+  - Prediction UI
+  - Model artifacts
+  - Backtesting CLI
+
+## 🧠 Model
 
 Model used:
 
@@ -79,7 +111,7 @@ Training includes:
 
 ---
 
-# 📊 Example Results
+## 📊 Example Results
 
 | Metric | Value |
 |------|------|
@@ -90,4 +122,4 @@ Training includes:
 
 ---
 
-# 📦 Project Structure
+## 📦 Project Structure
